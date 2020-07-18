@@ -9,87 +9,128 @@
         <script src="./asset/javascript/materialize.min.js"></script>
         <script src="./asset/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="./asset/javascript/greedynav.js"></script>
+        <script src="./asset/javascript/getDevice.js"></script>
         <link rel="stylesheet" href="./asset/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     </head>
     <body>
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" style="border-radius: 0; color: white;">
-            <a class="navbar-brand" href="#">
-                <img src="./asset/images/logo_single.png" width="90" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-            </a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item" id="navBarList">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="contact.html">Contact Us</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="about.html">About Us</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="portfolio.html">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="blog.html?kat=All">Blog</a>
-                    </li>
-                </ul>
+        <nav class="greedy navbar navbar-expand-sm bg-dark navbar-dark fixed-top" style="border-radius: 0; color: white;">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle navigation" style="float: left;">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="./asset/images/logo_single.png" width="90" height="30" class="d-inline-block align-top">
+                    </a>
+                </div>
+
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html?kat=All">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
-        <div class="container-fluid" style="padding: 0 0 0 0;">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 100%;">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                </ol>
-                <div class="carousel-inner" style="height: 100%;">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="./asset/images/Home1.jpg" alt="First slide">
+        <div class="container-fluid" style="padding: 0 0 0 0; padding-top: 56; padding-left: 1%; padding-bottom: 2%; background-image: url('./asset/images/background.jpg');background-size: 100%;">            
+            <div style="background-color: rgba(255, 255, 255, 0.877); color: black; border-radius: 10px; padding: 1% 1% 1% 1%;">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 100%;">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="./asset/images/Home1.jpg" alt="First slide">
+                            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(255, 255, 255, 0.50); color: black; border-radius: 10px; padding: 1% 1% 1% 1%;">
+                                <h1>Coral Island - Thailand</h1>
+                                <p style="text-align: justify;">
+                                    Coral Island – also known as Koh Larn – is a little patch of paradise just a 45-minute boat ride from Pattaya Pier. The largest of Pattaya’s Near Islands, it is ringed by beautiful white-sand beaches and warm turquoise seas. The verdant hilly interior can be explored along a series of roads and well-maintained footpaths, providing great views of the Pattaya coastline.
+                                    This tour takes you from your hotel in Pattaya to the pier, then across to Koh Larn for a day of relaxation or excitement. Choose from snoozing in the sun, swimming in the ocean, snorkelling, waterskiing, parasailing, windsurfing and more. You can also enjoy a tasty Thai lunch at an open-air restaurant right on the coast.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./asset/images/Home2.jpg" alt="Second slide">
+                            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(255, 255, 255, 0.50); color: black; border-radius: 10px; padding: 1% 1% 1% 1%;">
+                                <h1>Forbidden City - Beijing</h1>
+                                <p style="text-align: justify;">
+                                    The Forbidden City (Chinese: 故宫; pinyin: Gùgōng) is a palace complex in central Beijing, China. It houses the Palace Museum, and was the former Chinese imperial palace and state residence of the Emperor of China from the Ming dynasty (since the Yongle Emperor) to the end of the Qing dynasty, between 1420 and 1924. The Forbidden City served as the home of Chinese emperors and their households and was the ceremonial and political center of the Chinese government for almost 500 years.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./asset/images/Home3.jpg" alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(255, 255, 255, 0.50); color: black; border-radius: 10px; padding: 1% 1% 1% 1%;">
+                                <h1>Raja Ampat - Indonesia</h1>
+                                <p style="text-align: justify;">
+                                    Raja Ampat is located off the northwest tip of Bird's Head Peninsula on the island of New Guinea, in Indonesia's West Papua province, Raja Ampat, or the Four Kings, is an archipelago comprising over 1,500 small islands, cays, and shoals surrounding the four main islands of Misool, Salawati, Batanta, and Waigeo, and the smaller island of Kofiau.    
+                                </p>
+                            </div> 
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./asset/images/Home4.jpg" alt="Fourth slide">
+                            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(255, 255, 255, 0.50); color: black; border-radius: 10px; padding: 1% 1% 1% 1%;">
+                                <h1>Bromo Tengger Semeru National Park - Indonesia</h1>
+                                <p style="text-align: justify;">
+                                    Bromo Tengger Semeru National Park, known locally as Taman Nasional Bromo Tengger Semeru (TNBTS) is a national park located in East Java, Indonesia, to the east of Malang and Lumajang, to the south of Pasuruan and Probolinggo, and to the southeast of Surabaya, the capital of East Java. It is the only conservation area in Indonesia that has a sand sea, the Tengger Sand Sea (Indonesian: Laut Pasir Tengger), across which is the caldera of an ancient volcano (Tengger) from which four new volcanic cones have emerged. This unique feature covers a total area of 5,250 hectares at an altitude of about 2,100 metres (6,900 ft). The massif also contains the highest mountain in Java, Mount Semeru (3,676 m), four lakes and 50 rivers. It is named after the Tengger Kingdom. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./asset/images/Home5.jpg" alt="Fifth slide">
+                            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(255, 255, 255, 0.50); color: black; border-radius: 10px; padding: 1% 1% 1% 1%;">
+                                <h1>Wat Arun - Thailand</h1>
+                                <p style="text-align: justify;">
+                                    Wat Arun is a Buddhist temple (wat) in Bangkok Yai district of Bangkok, Thailand, on the Thonburi west bank of the Chao Phraya River. The temple derives its name from the Hindu god Aruna, often personified as the radiations of the rising sun. Wat Arun is among the best known of Thailand's landmarks. The first light of the morning reflects off the surface of the temple with pearly iridescence. Although the temple had existed since at least the seventeenth century, its distinctive prang (spires) were built in the early nineteenth century during the reign of King Rama II.
+                                </p>
+                            </div>
+                        </div>     
                     </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="./asset/images/Home2.jpg" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="./asset/images/Home3.jpg" alt="Third slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="./asset/images/Home4.jpg" alt="Fourth slide">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="./asset/images/Home5.jpg" alt="Fifth slide">
-                    </div>    
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
+                <br>
+                <div id="pengumuman">
+                    <h1>Pengumuman Air Asia</h1>
+                    <div class="row row-cols-1 row-cols-md-3" id="hasil" style="width:100%;">
+
+                    </div>
+                </div>
+            </div> 
         </div>
-        <footer>
-            <div class="d-flex flex-row bd-highlight mb-3 justify-content-around">
-                <div class="p-2 bd-highlight" style="width: 30%;">
+        <footer style="padding-bottom: 1%;">
+            <div class="d-flex flex-wrap bd-highlight mb-3 justify-content-around" id="flexBoxFooter">
+                <div class="p-2 bd-highlight" style="width: 100%;" name="footerContent">
                     <h5>ABOUT US</h5>
                     <br>
                     <p style="text-align: justify;">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     </p>
                 </div>
-                <div class="p-2 bd-highlight" >
+                <div class="p-2 bd-highlight" style="width: 100%;" name="footerContent">
                     <h5>Location
                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-map" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M15.817.613A.5.5 0 0 1 16 1v13a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 14.51l-4.902.98A.5.5 0 0 1 0 15V2a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0l4.902.98 4.902-.98a.5.5 0 0 1 .415.103zM10 2.41l-4-.8v11.98l4 .8V2.41zm1 11.98l4-.8V1.61l-4 .8v11.98zm-6-.8V1.61l-4 .8v11.98l4-.8z"/>
                         </svg>    
                     </h5>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7627683468886!2d100.36756871425389!3d-0.30235099977940244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd538a2e38301d1%3A0x192a4a6ae61d4bc2!2sPIKNIK%20TOUR!5e0!3m2!1sid!2sid!4v1594441150995!5m2!1sid!2sid" width="400" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7627683468886!2d100.36756871425389!3d-0.30235099977940244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd538a2e38301d1%3A0x192a4a6ae61d4bc2!2sPIKNIK%20TOUR!5e0!3m2!1sid!2sid!4v1594441150995!5m2!1sid!2sid" width="100%" height="90%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
-                <div class="p-2 bd-highlight" style="width: 30%;">
+                <div class="p-2 bd-highlight" style="width: 100%;" name="footerContent">
                     <h5>CONTACT US</h5>
                     <div class="d-flex flex-row bd-highlight mb-3">
                         <div class="p-2 bd-highlight">
@@ -105,4 +146,58 @@
             </div>
         </footer>
     </body>
+    <script>
+        let footerContent = document.getElementsByName('footerContent')
+        let footerFlexBox = document.getElementById('flexBoxFooter')
+        let mWidth = ''
+        if (getDeviceType() === "desktop"){
+            mWidth = "30%"
+            footerFlexBox.className = "d-flex flex-wrap bd-highlight mb-3 justify-content-around"
+        }
+        else {
+            mWidth = "100%"
+            footerFlexBox.className = "d-flex flex-wrap bd-highlight mb-3"
+        }
+        for(let i = 0; i < footerContent.length; i++){
+            footerContent[i].style.width = mWidth
+        }
+
+        let hasil = document.getElementById('hasil')
+        let text = ''
+        let pengumuman = [
+            {
+                judul : 'Berita Terkini COVID-19',
+                caption : 'Untuk berita terkini & Informasi keselamatan',
+                pic : 'https://a.staticaa.com/images/web-apps/component/carousel-widget/inthistogether.jpg',
+                wiki : 'https://www.airasia.com/aa/covid-19/id/id/inthistogether.html',
+            },
+            {
+                judul : 'Terbang aman bersama AirAsia',
+                caption : 'Informasi penerapan standar keamanan AirAsia',
+                pic : 'https://a.staticaa.com/images/web-apps/component/carousel-widget/safety2.jpg',
+                wiki : 'https://newsroom.airasia.com/news/2020/4/28/covid-19-terbang-aman-bersama-airasia-penerapan-standar-keamanan-di-darat-dan-di-udara',
+            },      
+            {
+                judul : 'Peduli lindungi',
+                caption : 'Download aplikasi PeduliLindungi sebelum terbang',
+                pic : 'https://a.staticaa.com/images/web-apps/component/carousel-widget/web_id.png',
+                wiki : 'https://pedulilindungi.id/',
+            },
+        ]
+        for (let i = 0; i < pengumuman.length; i++){
+            text += createDivCard(pengumuman[i].pic,pengumuman[i].judul,pengumuman[i].caption,pengumuman[i].wiki)
+        }
+        hasil.innerHTML = text
+        
+        function createDivCard(pic,judul,caption,link){
+            return `<div class="col mb-4">
+                            <div class="card" style="padding: 5 5 5 5 ; text-align: center;">
+                                <img src=${pic} class="border rounded" style="width: 100%; height:180px;object-fit:cover;">
+                                <h3 class="card-title" style="text-align: left">${judul}</h3>
+                                <h5 class="card-title" style="text-align: left">${caption}</h5>
+                                <button class="btn btn-primary" onclick=" window.open('${link}','_blank');"> Check </button>
+                            </div>
+                    </div>`
+        }
+    </script>
 </html>

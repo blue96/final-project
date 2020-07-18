@@ -10,33 +10,33 @@
         <script src="./asset/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <link rel="stylesheet" href="./asset/style.css">
+        <script src="./asset/javascript/getDevice.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     </head>
     <body onload="selectAll(event)">
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" style="border-radius: 0; color: white;">
-            <a class="navbar-brand" href="#">
-                <img src="./asset/images/logo_single.png" width="90" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-            </a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item" id="navBarList">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="contact.html">Contact Us</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="about.html">About Us</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="portfolio.html">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="blog.html?kat=All">Blog</a>
-                    </li>
-                </ul>
+        <nav class="greedy navbar navbar-expand-sm bg-dark navbar-dark fixed-top" style="border-radius: 0; color: white;">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle navigation" style="float: left;">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="./asset/images/logo_single.png" width="90" height="30" class="d-inline-block align-top">
+                    </a>
+                </div>
+
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html?kat=All">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
-        <div class="container-fluid" style="padding: 0 0 0 0; padding-top: 5%; padding-left: 1%; padding-bottom: 2%; background-image: url('./asset/images/background.jpg');background-size: 100%;">
+        <div class="container-fluid" style="padding: 0 0 0 0; padding-top: 56; padding-left: 1%; padding-bottom: 2%; background-image: url('./asset/images/background.jpg');background-size: 100%;">            
             <div style="background-color: rgba(255, 255, 255, 0.877); color: black; border-radius: 10px; padding: 1% 1% 1% 1%;">
                 <button onclick="selectAll(event)" class="btn btn-primary"> All </button>
                 <button onclick="selectTour(event, 'Indonesia')" class="btn btn-primary"> Indonesia </button>
@@ -51,24 +51,24 @@
                 </div>
             </div>
         </div>
-        <footer>
-            <div class="d-flex flex-row bd-highlight mb-3 justify-content-around">
-                <div class="p-2 bd-highlight" style="width: 30%;">
+        <footer style="padding-bottom: 1%;">
+            <div class="d-flex flex-wrap bd-highlight mb-3 justify-content-around" id="flexBoxFooter">
+                <div class="p-2 bd-highlight" style="width: 100%;" name="footerContent">
                     <h5>ABOUT US</h5>
                     <br>
                     <p style="text-align: justify;">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     </p>
                 </div>
-                <div class="p-2 bd-highlight" >
+                <div class="p-2 bd-highlight" style="width: 100%;" name="footerContent">
                     <h5>Location
                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-map" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M15.817.613A.5.5 0 0 1 16 1v13a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 14.51l-4.902.98A.5.5 0 0 1 0 15V2a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0l4.902.98 4.902-.98a.5.5 0 0 1 .415.103zM10 2.41l-4-.8v11.98l4 .8V2.41zm1 11.98l4-.8V1.61l-4 .8v11.98zm-6-.8V1.61l-4 .8v11.98l4-.8z"/>
                         </svg>    
                     </h5>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7627683468886!2d100.36756871425389!3d-0.30235099977940244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd538a2e38301d1%3A0x192a4a6ae61d4bc2!2sPIKNIK%20TOUR!5e0!3m2!1sid!2sid!4v1594441150995!5m2!1sid!2sid" width="400" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7627683468886!2d100.36756871425389!3d-0.30235099977940244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd538a2e38301d1%3A0x192a4a6ae61d4bc2!2sPIKNIK%20TOUR!5e0!3m2!1sid!2sid!4v1594441150995!5m2!1sid!2sid" width="100%" height="90%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
-                <div class="p-2 bd-highlight" style="width: 30%;">
+                <div class="p-2 bd-highlight" style="width: 100%;" name="footerContent">
                     <h5>CONTACT US</h5>
                     <div class="d-flex flex-row bd-highlight mb-3">
                         <div class="p-2 bd-highlight">
@@ -85,51 +85,75 @@
         </footer>
     </body>
     <script>
+        let footerContent = document.getElementsByName('footerContent')
+        let footerFlexBox = document.getElementById('flexBoxFooter')
+        let mWidth = ''
+        if (getDeviceType() === "desktop"){
+            mWidth = "30%"
+            footerFlexBox.className = "d-flex flex-wrap bd-highlight mb-3 justify-content-around"
+        }
+        else {
+            mWidth = "100%"
+            footerFlexBox.className = "d-flex flex-wrap bd-highlight mb-3"
+        }
+        for(let i = 0; i < footerContent.length; i++){
+            footerContent[i].style.width = mWidth
+        }
+
         let wisata = [
             {
                 name : 'Raja Ampat',
                 loc : 'Indonesia',
                 pic : './asset/images/raja-ampat.jpg',
+                wiki : 'https://id.wikipedia.org/wiki/Kepulauan_Raja_Ampat',
             },
             {
                 name : 'Pulau Komodo',
                 loc : 'Indonesia',
                 pic : './asset/images/pulau-komodo.jpg',
+                wiki : 'https://id.wikipedia.org/wiki/Pulau_Komodo'
             },
             {
                 name : 'Tana Toraja',
                 loc : 'Indonesia',
                 pic : './asset/images/tana-toraja.jpg',
+                wiki : 'https://id.wikipedia.org/wiki/Kabupaten_Tana_Toraja',
             },
             {
                 name : 'Danau Toba',
                 loc : 'Indonesia',
                 pic : './asset/images/danau-toba.jpg',
+                wiki : 'https://id.wikipedia.org/wiki/Danau_Toba',
             },
             {
                 name : 'Singapura',
                 loc : 'Singapura',
                 pic : './asset/images/singapura.jpg',
+                wiki : 'https://id.wikipedia.org/wiki/Singapura',
             },
             {
                 name : 'Hokaido',
                 loc : 'Jepang',
                 pic : './asset/images/Hokaido-Jepang.jpg',
+                wiki : 'https://id.wikipedia.org/wiki/Prefektur_Hokkaido',
             },
             {
                 name : 'Tokyo',
                 loc : 'Jepang',
                 pic : './asset/images/Tokyo-Jepang.jpg',
+                wiki : 'https://id.wikipedia.org/wiki/Tokyo',
             },
             {
                 name : 'Pattaya',
                 loc : 'Thailand',
                 pic : './asset/images/pattaya-thailand.jpg',
+                wiki : 'https://id.wikipedia.org/wiki/Pattaya',
             },
             {
                 name : 'Bangkok',
                 loc : 'Thailand',
                 pic : './asset/images/Home5.jpg',
+                wiki : 'https://id.wikipedia.org/wiki/Bangkok',
             },
         ]
         
@@ -141,12 +165,7 @@
             text = ''
             let selectedWisata = wisata
             for (let i = 0; i < selectedWisata.length; i++){
-            text += `   <div class="col mb-4">
-                            <div class="card" style="padding: 5 5 5 5 ; text-align: center;">
-                                <img src=${selectedWisata[i].pic} class="border border-dark rounded" style="max-width: 100%;">
-                                <h5 class="card-title">${selectedWisata[i].name} - ${selectedWisata[i].loc}</h5>
-                            </div>
-                        </div>`
+                text += createDivCard(selectedWisata[i].pic,selectedWisata[i].name,selectedWisata[i].loc,selectedWisata[i].wiki)
             }
             hasil.innerHTML = text
         }
@@ -157,12 +176,7 @@
             text = ''
             let selectedWisata = wisata.filter(loc => loc.loc != 'Indonesia');
             for (let i = 0; i < selectedWisata.length; i++){
-            text += `   <div class="col mb-4">
-                            <div class="card" style="padding: 5 5 5 5 ; text-align: center;">
-                                <img src=${selectedWisata[i].pic} class="border border-dark rounded" style="max-width: 100%;">
-                                <h5 class="card-title">${selectedWisata[i].name} - ${selectedWisata[i].loc}</h5>
-                            </div>
-                        </div>`
+                text += createDivCard(selectedWisata[i].pic,selectedWisata[i].name,selectedWisata[i].loc,selectedWisata[i].wiki)
             }
             hasil.innerHTML = text
         }
@@ -173,14 +187,19 @@
             text = ''
             let selectedWisata = wisata.filter(loc => loc.loc === dest);
             for (let i = 0; i < selectedWisata.length; i++){
-            text += `   <div class="col mb-4">
-                            <div class="card" style="padding: 5 5 5 5 ; text-align: center;">
-                                <img src=${selectedWisata[i].pic} class="border border-dark rounded" style="max-width: 100%;">
-                                <h5 class="card-title">${selectedWisata[i].name} - ${selectedWisata[i].loc}</h5>
-                            </div>
-                        </div>`
+                text += createDivCard(selectedWisata[i].pic,selectedWisata[i].name,selectedWisata[i].loc,selectedWisata[i].wiki)
             }
             hasil.innerHTML = text
+        }
+
+        function createDivCard(pic,name,wisata,link){
+            return `<div class="col mb-4">
+                            <div class="card" style="padding: 5 5 5 5 ; text-align: center;">
+                                <img src=${pic} class="border border-dark rounded" style="max-width: 100%; max-height: 100%;">
+                                <h5 class="card-title">${name} - ${wisata}</h5>
+                                <button class="btn btn-primary" onclick="window.location.href='${link}';"> Check </button>
+                            </div>
+                    </div>`
         }
     </script>
 </html>
